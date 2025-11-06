@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real Estate Seller & Buyer Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 850px;
+            margin: auto;
+            background: #f7f7f7;
+        }
+        h2, h3 {
+            background: #0078ff;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        form section {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.15);
+        }
+        label { font-weight: bold; margin-top: 10px; display: block; }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+        textarea { resize: vertical; }
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #0078ff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover { background: #005fcc; }
+    </style>
+</head>
+<body>
+
+<h2>Seller & Buyer Information Form</h2>
+
+<form action="realestate" method="post" >
+
+    <section>
+        <h3>Seller Information</h3>
+
+        <label>Full Name</label>
+        <input type="text" name="sellerFullName" required>
+
+        <label>Email Address</label>
+        <input type="email" name="sellerEmail" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="sellerPhone" required>
+
+        <label>Preferred Contact Method and Time</label>
+        <input type="text" name="sellerContactPreference">
+
+        <h4>Property Information</h4>
+
+        <label>Property Address</label>
+        <input type="text" name="propertyAddress" placeholder="Street, City, State, Zip Code" required>
+
+        <label>Property Type</label>
+        <select name="propertyType">
+            <option>House</option><option>Condo</option><option>Townhouse</option>
+            <option>Land</option><option>Commercial</option><option>Other</option>
+        </select>
+
+        <label>Number of Bedrooms</label>
+        <input type="number" name="bedrooms" min="0">
+
+        <label>Number of Bathrooms</label>
+        <input type="number" name="bathrooms" min="0" step="0.5">
+
+        <label>Square Footage</label>
+        <input type="number" name="squareFootage" min="0">
+
+        <label>Lot Size</label>
+        <input type="text" name="lotSize">
+
+        <label>Year Built</label>
+        <input type="number" name="yearBuilt">
+
+        <label>Key Features / Amenities</label>
+        <textarea name="sellerFeatures" rows="4"></textarea>
+
+        <label>Any Known Issues / Disclosures</label>
+        <textarea name="sellerIssues" rows="3"></textarea>
+
+        <label>Reason for Selling</label>
+        <textarea name="reasonForSelling" rows="3"></textarea>
+
+        <label>Desired Selling Price</label>
+        <input type="number" name="sellingPrice" min="0">
+
+        <label>Preferred Closing Date</label>
+        <input type="date" name="closingDate">
+
+        <h4>Upload Property Documents</h4>
+
+        <label>Proof of Ownership (Deed)</label>
+        <input type="file" name="deed">
+
+        <label>Property Tax Statements</label>
+        <input type="file" name="taxStatements">
+
+        <label>Utility Bills</label>
+        <input type="file" name="utilityBills">
+
+        <label>Floor Plans</label>
+        <input type="file" name="floorPlans">
+
+        <label>Photos of the Property</label>
+        <input type="file" name="propertyPhotos" multiple>
+    </section>
+
+
+
+    <section>
+        <h3>Buyer Information</h3>
+
+        <label>Full Name</label>
+        <input type="text" name="buyerFullName" required>
+
+        <label>Email Address</label>
+        <input type="email" name="buyerEmail" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="buyerPhone" required>
+
+        <label>Preferred Contact Method and Time</label>
+        <input type="text" name="buyerContactPreference">
+
+        <h4>Buyer Preferences</h4>
+
+        <label>Desired Property Type</label>
+        <select name="buyerPropertyType">
+            <option>House</option><option>Condo</option><option>Townhouse</option>
+            <option>Land</option><option>Commercial</option><option>Any</option>
+        </select>
+
+        <label>Preferred Location(s)</label>
+        <textarea name="preferredLocations" rows="3"></textarea>
+
+        <label>Desired Number of Bedrooms</label>
+        <input type="number" name="desiredBedrooms" min="0">
+
+        <label>Desired Number of Bathrooms</label>
+        <input type="number" name="desiredBathrooms" min="0" step="0.5">
+
+        <label>Minimum Square Footage</label>
+        <input type="number" name="minSqft" min="0">
+
+        <label>Maximum Square Footage</label>
+        <input type="number" name="maxSqft" min="0">
+
+        <label>Budget Range</label>
+        <input type="text" name="budgetRange" placeholder="e.g., ₹50,00,000 - ₹1,20,00,000">
+
+        <label>Key Features / Amenities Desired</label>
+        <textarea name="buyerFeatures" rows=4></textarea>
+
+        <label>Timeline for Purchase</label>
+        <input type="text" name="purchaseTimeline">
+
+        <label>Pre-approval Status</label>
+        <select name="preApproval">
+            <option>No</option>
+            <option>Yes</option>
+        </select>
+
+        <label>If Yes, Lender / Bank Details</label>
+        <input type="text" name="lenderDetails">
+    </section>
+
+    <button type="submit">Submit Information</button>
+</form>
+
+</body>
+</html>

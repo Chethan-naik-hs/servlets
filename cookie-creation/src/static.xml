@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context docBase="D:\java Projects\servlets-omkar\cookie-creation\src\static">
+  <Resources cacheMaxSize="10240">
+    <PreResources base="D:/java Projects/servlets-omkar/cookie-creation/out/production/cookie-creation" className="org.apache.catalina.webresources.DirResourceSet" webAppMount="/WEB-INF/classes"/>
+    <PostResources base="C:/Users/user/Downloads/apache-tomcat-9.0.38/lib/servlet-api.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/servlet-api.jar"/>
+  </Resources>
+</Context>
